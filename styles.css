@@ -99,6 +99,7 @@
   .about-logo img{display:block;width:clamp(96px,18vw,144px);height:auto}
   .about-hero .hero-note{color:var(--ink-soft)}
   .about-hero .hero-note a{text-decoration:underline;text-underline-offset:2px}
+  .about-hero .hero-sponsors{margin-top:18px}
   .skyline-footer{
     min-height:calc(var(--skyline-height) / 3);
   }
