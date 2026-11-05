@@ -27,6 +27,7 @@
   html{scroll-behavior:smooth;scroll-padding-top:70px}
   body{
     margin:0;
+    isolation:isolate;
     background:var(--bg);
     color:var(--ink);
     font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
@@ -60,6 +61,59 @@
     border-radius:999px;padding:5px 13px;font-size:13.5px;font-weight:500;
   }
   .hero-note{font-size:14.5px;color:var(--ink-faint);margin:0}
+
+  /* ---------- Page skyline ---------- */
+  .about-hero,.skyline-footer{
+    --auckland-skyline:url("./images/auckland-skyline.svg");
+    --skyline-height:clamp(360px,32vw,480px);
+    position:relative;
+  }
+  .about-hero::before,.skyline-footer::before{
+    content:"";
+    position:absolute;
+    inset:auto 0 0;
+    z-index:-1;
+    height:var(--skyline-height);
+    background:var(--auckland-skyline) right bottom / max(640px,100%) 100% no-repeat;
+    pointer-events:none;
+  }
+  header.about-hero{
+    min-height:var(--skyline-height);
+    isolation:isolate;
+    padding-top:calc(32px + env(safe-area-inset-top,0px));
+    padding-bottom:68px;
+  }
+  .about-masthead{
+    display:flex;
+    align-items:center;
+    gap:clamp(12px,2vw,24px);
+    margin-bottom:20px;
+  }
+  .about-masthead .eyebrow{margin:0}
+  .about-logo{
+    flex:none;
+    padding:4px 10px;
+    border-radius:8px;
+    background:#fff;
+  }
+  .about-logo img{display:block;width:clamp(96px,18vw,144px);height:auto}
+  .about-hero .hero-note{color:var(--ink-soft)}
+  .about-hero .hero-note a{text-decoration:underline;text-underline-offset:2px}
+  .skyline-footer{
+    min-height:calc(var(--skyline-height) / 3);
+  }
+  .skyline-footer::before{
+    mask-image:linear-gradient(to top,#000,transparent);
+  }
+  @media (max-width:700px){
+    .about-hero::before{opacity:.65}
+  }
+  @media (prefers-color-scheme:dark){
+    .about-hero::before,.skyline-footer::before{
+      filter:invert(1) hue-rotate(180deg) brightness(.6);
+      opacity:.58;
+    }
+  }
 
   /* ---------- nav ---------- */
   nav{
@@ -121,9 +175,15 @@
     font-size:12px;letter-spacing:.07em;text-transform:uppercase;
     color:var(--ink-faint);font-weight:600;border-bottom:2px solid var(--rule);
   }
+  #program thead th{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
   td.time{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink-soft);width:1%}
   td .sess{font-weight:650}
-  tr.brk td{color:var(--ink-faint);font-style:italic}
+  tr.brk td{
+    background:var(--accent-soft);color:var(--accent-ink);font-weight:650;
+    background:color-mix(in srgb,var(--accent-soft) 50%,var(--bg));
+    border-top:1px solid var(--rule);
+  }
+  tr.brk .time{border-left:3px solid var(--accent);padding-left:9px}
   .tbd{
     display:inline-block;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
     background:var(--accent-soft);color:var(--accent-ink);border-radius:4px;
@@ -132,15 +192,29 @@
 
   /* ---------- people roster ---------- */
   .roster{margin:0 0 4px;padding:0;list-style:none}
-  .roster li{margin:0 0 20px}
+  .roster li{
+    display:grid;grid-template-columns:clamp(64px,18vw,96px) minmax(0,1fr);
+    align-items:start;gap:clamp(12px,3vw,20px);margin:0 0 24px;
+  }
   .roster li:last-child{margin-bottom:0}
+  .roster .portrait{
+    display:block;width:100%;height:auto;aspect-ratio:6/7;object-fit:cover;
+    border-radius:8px;background:var(--bg-alt);
+  }
+  .roster .portrait-square{aspect-ratio:1/1}
   .roster .name{
     font-size:17px;font-weight:650;letter-spacing:-.01em;margin:0;line-height:1.35;
+    color:var(--ink);text-transform:none;
   }
-  .roster .name a{color:var(--accent)}
   .roster .role{font-size:15px;color:var(--ink);margin:2px 0 0;line-height:1.4}
   .roster .affil{font-size:15px;color:var(--ink-faint);margin:1px 0 0;line-height:1.4}
   .roster .talk{font-size:14.5px;color:var(--ink-soft);font-style:italic;margin:5px 0 0;line-height:1.45}
+  .roster .talk-title{font-size:16px;font-weight:700;font-style:normal;color:var(--accent)}
+  .roster .bio,.roster .talk-details{
+    font-size:15px;color:var(--ink-soft);margin:8px 0 0;
+  }
+  .talk-details summary{color:var(--accent);cursor:pointer;font-weight:650}
+  .talk-details p{margin:6px 0 0}
 
   /* ---------- contact ---------- */
   .contact-box{
