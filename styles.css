@@ -216,6 +216,17 @@
   .talk-details summary{color:var(--accent);cursor:pointer;font-weight:650}
   .talk-details p{margin:6px 0 0}
 
+  /* Keep organisers in paired rows, with portraits above text on small screens. */
+  .organiser-roster{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;
+  }
+  .organiser-roster > li{margin:0;align-content:start}
+  @media (max-width:600px){
+    .organiser-roster{column-gap:24px}
+    .organiser-roster > li{grid-template-columns:minmax(0,1fr);gap:12px}
+    .organiser-roster .portrait{width:80px}
+  }
+
   /* ---------- contact ---------- */
   .contact-box{
     background:var(--bg-alt);border:1px solid var(--rule);
