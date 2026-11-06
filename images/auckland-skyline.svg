@@ -29,37 +29,39 @@
     </linearGradient>
   </defs>
   <path fill="url(#sky)" d="M0 0h1853v733H0z"/>
-  <ellipse cx="1605" cy="733" rx="410" ry="190" fill="url(#horizon)"/>
-  <path fill="#cfd6d1" d="M0 731C104 722 227 688 336 672H365
-    C479 686 630 716 806 734H0Z"/>
-  <g fill="none" stroke="#b1b7c2" stroke-width="2.5">
-    <path d="M678 713.5H1139 M791 713.5Q878 666 964 713.5
-      M807 713.5Q878 680 949 713.5"/>
-    <path d="M703 713.5V735 M753 713.5V735 M803 713.5V735
-      M952 713.5V735 M1002 713.5V735 M1051 713.5V735 M1101 713.5V735"/>
-  </g>
-  <g fill="url(#distant-buildings)">
-    <path d="M1250 733V671H1287V634H1318V659H1361V597H1399V622H1448V560
-      H1480V609H1517V522H1555V733Z"/>
-    <path d="M1659 733V547H1703V597H1740V498H1790V622H1821V572H1853V733Z"/>
-  </g>
-  <g fill="url(#foreground-buildings)">
-    <path d="M1275 684h50v49h-50z M1330 659h38v74h-38z M1374 678h56v55h-56z
-      M1436 641h38v92h-38z M1480 665h49v68h-49z M1529 628h31v105h-31z
-      M1678 646h44v87h-44z M1728 616h37v117h-37z M1771 671h50v62h-50z
-      M1821 653h32v80h-32z"/>
-  </g>
-  <g fill="url(#sky-tower)">
-    <path d="M1603 44h2v50h1.5l2 151h-9l2-151h1.5z
-      M1597 252h13v75l22 16h-57l22-16z
-      M1596 410h16l6 286 8 37h-44l8-37z"/>
-    <rect x="1591.5" y="245.5" width="25" height="10.5" rx="3"/>
-    <rect x="1574" y="341" width="60" height="14.5" rx="4.5"/>
-    <rect x="1571" y="357.5" width="66" height="16.5" rx="5"/>
-    <path d="M1580 376.5h48a4.5 4.5 0 0 1 4.5 4.5v8.5l-20.5 21h-16
-      l-20.5-21V381a4.5 4.5 0 0 1 4.5-4.5z"/>
+  <g transform="translate(185.3 0) scale(.8 1)">
+    <ellipse cx="1605" cy="733" rx="410" ry="190" fill="url(#horizon)"/>
+    <path fill="#cfd6d1" d="M0 731C104 722 227 688 336 672H365
+      C479 686 630 716 806 734H0Z"/>
+    <g fill="none" stroke="#b1b7c2" stroke-width="2.5">
+      <path d="M678 713.5H1139 M791 713.5Q878 666 964 713.5
+        M807 713.5Q878 680 949 713.5"/>
+      <path d="M703 713.5V735 M753 713.5V735 M803 713.5V735
+        M952 713.5V735 M1002 713.5V735 M1051 713.5V735 M1101 713.5V735"/>
+    </g>
+    <g fill="url(#distant-buildings)">
+      <path d="M1250 733V671H1287V634H1318V659H1361V597H1399V622H1448V560
+        H1480V609H1517V522H1555V733Z"/>
+      <path d="M1659 733V547H1703V597H1740V498H1790V622H1821V572H1853V733Z"/>
+    </g>
+    <g fill="url(#foreground-buildings)">
+      <path d="M1275 684h50v49h-50z M1330 659h38v74h-38z M1374 678h56v55h-56z
+        M1436 641h38v92h-38z M1480 665h49v68h-49z M1529 628h31v105h-31z
+        M1678 646h44v87h-44z M1728 616h37v117h-37z M1771 671h50v62h-50z
+        M1821 653h32v80h-32z"/>
+    </g>
+    <g fill="url(#sky-tower)">
+      <path d="M1603 44h2v50h1.5l2 151h-9l2-151h1.5z
+        M1597 252h13v75l22 16h-57l22-16z
+        M1596 410h16l6 286 8 37h-44l8-37z"/>
+      <rect x="1591.5" y="245.5" width="25" height="10.5" rx="3"/>
+      <rect x="1574" y="341" width="60" height="14.5" rx="4.5"/>
+      <rect x="1571" y="357.5" width="66" height="16.5" rx="5"/>
+      <path d="M1580 376.5h48a4.5 4.5 0 0 1 4.5 4.5v8.5l-20.5 21h-16
+        l-20.5-21V381a4.5 4.5 0 0 1 4.5-4.5z"/>
+    </g>
   </g>
   <path fill="url(#water)" d="M0 733h1853v40H0z"/>
   <path d="M194 748.5H331 M878 756H1063 M1474 747H1560 M1585 761H1635"
-    fill="none" stroke="#f6fbfd" stroke-width="2.2" stroke-linecap="round"/>
+    transform="translate(185.3 0) scale(.8 1)" fill="none" stroke="#f6fbfd" stroke-width="2.2" stroke-linecap="round"/>
 </svg>

@@ -74,7 +74,7 @@
     inset:auto 0 0;
     z-index:-1;
     height:var(--skyline-height);
-    background:var(--auckland-skyline) right bottom / max(640px,100%) 100% no-repeat;
+    background:var(--auckland-skyline) center bottom / 100% 100% no-repeat;
     pointer-events:none;
   }
   header.about-hero{
@@ -218,6 +218,7 @@
     border-radius:8px;background:var(--bg-alt);
   }
   .roster .portrait-square{aspect-ratio:1/1}
+  #jacob-elmasry .portrait{padding-top:7px;background:#f2f2f2}
   .roster .name{
     font-size:17px;font-weight:650;letter-spacing:-.01em;margin:0;line-height:1.35;
     color:var(--ink);text-transform:none;
